@@ -22,8 +22,10 @@ public class Rover {
                 this.x += 1;
             else if (direction == 'W')
                 this.x -= 1;
-            else 
+            else if (direction == 'N')
                 this.y += 1;
+            else
+                this.y -= 1;
         }
     }
 }
