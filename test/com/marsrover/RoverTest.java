@@ -103,4 +103,13 @@ public class RoverTest {
 
         assertEquals("1 2 W", rover.getFinalPosition());
     }
+
+    @Test
+    public void shouldRoverKnowsThatHowToTurnRightWhenItIsFacingWest() {
+        Rover rover = new Rover(1, 2, 'W');
+
+        rover.go("R");
+
+        assertEquals("1 2 N", rover.getFinalPosition());
+    }
 }

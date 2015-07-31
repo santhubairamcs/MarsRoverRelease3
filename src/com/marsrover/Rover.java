@@ -40,8 +40,10 @@ public class Rover {
         else if (instructionChar == 'R') {
             if (direction == 'E')
                 direction = 'S';
-            else
+            else if (direction == 'S')
                 direction = 'W';
+            else
+                direction = 'N';
         }
     }
 }
