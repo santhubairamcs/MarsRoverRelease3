@@ -17,7 +17,11 @@ public class Rover {
 
     public void go(String instruction) {
         char instructionChar = instruction.charAt(0);
-        if (instructionChar == 'M')
-            this.x = this.x + 1;
+        if (instructionChar == 'M') {
+            if (direction == 'E')
+                this.x = this.x + 1;
+            else
+                this.x = this.x - 1;
+        }
     }
 }

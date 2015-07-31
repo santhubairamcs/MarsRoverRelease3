@@ -22,4 +22,13 @@ public class RoverTest {
 
         assertEquals("2 2 E", rover.getFinalPosition());
     }
+
+    @Test
+    public void shouldRoverKnowsThatHowToMoveWhenItIsFacingWest() {
+        Rover rover = new Rover(1, 2, 'W');
+
+        rover.go("M");
+
+        assertEquals("0 2 W", rover.getFinalPosition());
+    }
 }
