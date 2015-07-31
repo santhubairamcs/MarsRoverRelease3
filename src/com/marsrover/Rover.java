@@ -29,11 +29,13 @@ public class Rover {
         }
         else if (instructionChar == 'L') {
             if (direction == 'E')
-                this.direction = 'N';
+                direction = 'N';
             else if(direction == 'N')
-                this.direction = 'W';
+                direction = 'W';
+            else if (direction == 'W')
+                direction = 'S';
             else
-                this.direction = 'S';
+                direction = 'E';
         }
     }
 }
