@@ -27,5 +27,8 @@ public class Rover {
             else
                 this.y -= 1;
         }
+        else if (instructionChar == 'L') {
+            this.direction = 'N';
+        }
     }
 }

@@ -42,11 +42,20 @@ public class RoverTest {
     }
 
     @Test
-    public void shouldRoverKnowsThatHowToMoveWhenItIsFacingSouth() {
+         public void shouldRoverKnowsThatHowToMoveWhenItIsFacingSouth() {
         Rover rover = new Rover(1, 2, 'S');
 
         rover.go("M");
 
         assertEquals("1 1 S", rover.getFinalPosition());
+    }
+
+    @Test
+    public void shouldRoverKnowsThatHowToTurnLeftWhenItIsFacingEast() {
+        Rover rover = new Rover(1, 2, 'E');
+
+        rover.go("L");
+
+        assertEquals("1 2 N", rover.getFinalPosition());
     }
 }
