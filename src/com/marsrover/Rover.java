@@ -1,9 +1,9 @@
 package com.marsrover;
 
 public class Rover {
-    private final int x;
-    private final int y;
-    private final char direction;
+    private int x;
+    private int y;
+    private char direction;
 
     public Rover(int x, int y, char direction) {
         this.x = x;
@@ -13,5 +13,11 @@ public class Rover {
 
     public String getFinalPosition() {
         return x + " " + y + " " + direction;
+    }
+
+    public void go(String instruction) {
+        char instructionChar = instruction.charAt(0);
+        if (instructionChar == 'M')
+            this.x = this.x + 1;
     }
 }
