@@ -38,7 +38,10 @@ public class Rover {
                 direction = 'E';
         }
         else if (instructionChar == 'R') {
-            direction = 'S';
+            if (direction == 'E')
+                direction = 'S';
+            else
+                direction = 'W';
         }
     }
 }
