@@ -18,34 +18,46 @@ public class Rover {
     public void go(String instruction) {
         char instructionChar = instruction.charAt(0);
         if (instructionChar == 'M') {
-            if (direction == 'E')
-                this.x += 1;
-            else if (direction == 'W')
-                this.x -= 1;
-            else if (direction == 'N')
-                this.y += 1;
-            else
-                this.y -= 1;
+            moveForward();
         }
         else if (instructionChar == 'L') {
-            if (direction == 'E')
-                direction = 'N';
-            else if(direction == 'N')
-                direction = 'W';
-            else if (direction == 'W')
-                direction = 'S';
-            else
-                direction = 'E';
+            turnLeft();
         }
         else if (instructionChar == 'R') {
-            if (direction == 'E')
-                direction = 'S';
-            else if (direction == 'S')
-                direction = 'W';
-            else if (direction == 'W')
-                direction = 'N';
-            else
-                direction = 'E';
+            turnRight();
         }
+    }
+
+    private void moveForward() {
+        if (direction == 'E')
+            this.x += 1;
+        else if (direction == 'W')
+            this.x -= 1;
+        else if (direction == 'N')
+            this.y += 1;
+        else
+            this.y -= 1;
+    }
+
+    private void turnLeft() {
+        if (direction == 'E')
+            direction = 'N';
+        else if(direction == 'N')
+            direction = 'W';
+        else if (direction == 'W')
+            direction = 'S';
+        else
+            direction = 'E';
+    }
+
+    private void turnRight() {
+        if (direction == 'E')
+            direction = 'S';
+        else if (direction == 'S')
+            direction = 'W';
+        else if (direction == 'W')
+            direction = 'N';
+        else
+            direction = 'E';
     }
 }
