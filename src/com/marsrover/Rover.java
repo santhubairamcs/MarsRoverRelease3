@@ -28,7 +28,10 @@ public class Rover {
                 this.y -= 1;
         }
         else if (instructionChar == 'L') {
-            this.direction = 'N';
+            if (direction == 'E')
+                this.direction = 'N';
+            else
+                this.direction = 'W';
         }
     }
 }
