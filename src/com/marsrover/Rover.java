@@ -16,15 +16,15 @@ public class Rover {
     }
 
     public void go(String instruction) {
-        char instructionChar = instruction.charAt(0);
-        if (instructionChar == 'M') {
-            moveForward();
-        }
-        else if (instructionChar == 'L') {
-            turnLeft();
-        }
-        else if (instructionChar == 'R') {
-            turnRight();
+        for (int index = 0; index < instruction.length(); index++) {
+            char instructionChar = instruction.charAt(index);
+            if (instructionChar == 'M') {
+                moveForward();
+            } else if (instructionChar == 'L') {
+                turnLeft();
+            } else if (instructionChar == 'R') {
+                turnRight();
+            }
         }
     }
 

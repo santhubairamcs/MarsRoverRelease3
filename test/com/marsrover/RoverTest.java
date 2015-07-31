@@ -121,4 +121,13 @@ public class RoverTest {
 
         assertEquals("1 2 E", rover.getFinalPosition());
     }
+
+    @Test
+    public void shouldRoverKnowsThatHowToExploreWhenStringOfInstructionGiven() {
+        Rover rover = new Rover(1, 2, 'E');
+
+        rover.go("MMMRRLLR");
+
+        assertEquals("4 2 S", rover.getFinalPosition());
+    }
 }
