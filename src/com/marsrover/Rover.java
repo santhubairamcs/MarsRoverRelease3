@@ -19,9 +19,11 @@ public class Rover {
         char instructionChar = instruction.charAt(0);
         if (instructionChar == 'M') {
             if (direction == 'E')
-                this.x = this.x + 1;
-            else
-                this.x = this.x - 1;
+                this.x += 1;
+            else if (direction == 'W')
+                this.x -= 1;
+            else 
+                this.y += 1;
         }
     }
 }
